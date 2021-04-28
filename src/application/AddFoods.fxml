@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" styleClass="AddEnergy" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane layoutX="1.0" layoutY="50.0" prefHeight="394.0" prefWidth="500.0">
+        <tabs>
+          <Tab text="Database">
+               <content>
+                  <AnchorPane prefHeight="342.0" prefWidth="500.0" style="-fx-background-color: LIGHTGREY;">
+                     <children>
+                        <ListView layoutX="14.0" layoutY="60.0" prefHeight="217.0" prefWidth="242.0" />
+                        <ScrollBar layoutX="236.0" layoutY="61.0" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="215.0" prefWidth="20.0" />
+                        <Label layoutX="14.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="102.0" text="Food Item">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="265.0" layoutY="56.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="79.0" text="Food Item">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="270.0" layoutY="115.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="70.0" text="Calorie(es)">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="278.0" layoutY="169.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="54.0" text="Quantity">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="289.0" layoutY="229.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="50.0" text="Add To">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox layoutX="379.0" layoutY="175.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="16.0" prefWidth="84.0" />
+                        <ChoiceBox layoutX="379.0" layoutY="233.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="16.0" prefWidth="84.0" />
+                        <TextField layoutX="379.0" layoutY="62.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="16.0" prefWidth="84.0" />
+                        <TextField layoutX="377.0" layoutY="118.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="16.0" prefWidth="84.0" />
+                        <Button layoutX="419.0" layoutY="309.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="27.0" prefWidth="63.0" text="Add">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Custom">
+               <content>
+                  <AnchorPane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: LIGHTGRAY;">
+                     <children>
+                        <Label layoutX="107.0" layoutY="37.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="87.0" text="Food Item">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="105.0" layoutY="73.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="91.0" text="Calorie(es)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="8.0" layoutY="116.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="188.0" text="Carbohydrate(optional)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="91.0" layoutY="203.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="107.0" text="Fat(optional)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="58.0" layoutY="165.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="136.0" text="Protein(optional)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="137.0" layoutY="279.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="70.0" text="Add To">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="251.0" layoutY="38.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="157.0" />
+                        <TextField layoutX="250.0" layoutY="242.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="157.0" />
+                        <TextField layoutX="250.0" layoutY="204.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="157.0" />
+                        <TextField layoutX="250.0" layoutY="165.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="157.0" />
+                        <TextField layoutX="251.0" layoutY="117.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="157.0" />
+                        <TextField layoutX="251.0" layoutY="74.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="157.0" />
+                        <Button layoutX="417.0" layoutY="306.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="27.0" prefWidth="63.0" text="Add">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="124.0" layoutY="241.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="78.0" text="Quantity">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox layoutX="250.0" layoutY="276.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="157.0" />
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+      <Label alignment="CENTER" layoutX="183.0" layoutY="14.0" prefHeight="27.0" prefWidth="136.0" text="Add Foods" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Button layoutX="422.0" layoutY="459.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="27.0" prefWidth="65.0" text="Home">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

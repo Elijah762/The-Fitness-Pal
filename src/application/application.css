@@ -1,0 +1,19 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule whi
+ *ch uses -fx-Property
+ */
+ .bodybg{
+ 	-fx-background-image:url("homebackground.jpg");
+	-fx-background-size:100% 100%;
+	-fx-background-opacity:0.5;
+ }
+ .CalcEnergy{
+ 	-fx-background-image:url("CalcEnerg.jpg");
+	-fx-background-size:100% 100%;
+	-fx-background-opacity:0.5;
+ }
+ 
+ .AddEnergy{
+ 	-fx-background-image:url("CalcEnerg.jpg");
+	-fx-background-size:100% 100%;
+	-fx-background-opacity:0.5;
+ }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: ALICEBLUE;" styleClass="bodybg" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FirstController">
+   <children>
+      <Button alignment="BASELINE_CENTER" layoutX="200.0" layoutY="234.0" mnemonicParsing="false" style="-fx-background-color: CORNFLOWERBLUE;" text="Start Here" textFill="#e4d9d9" />
+      <Label alignment="CENTER" layoutX="85.0" layoutY="74.0" prefHeight="172.0" prefWidth="330.0" text="FitnesPal">
+         <font>
+            <Font name="Angsana New Italic" size="125.0" />
+         </font>
+         <effect>
+            <Reflection bottomOpacity="0.12" fraction="0.85" topOffset="0.5" />
+         </effect>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" proportional="false">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#bc1a1a" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+   <effect>
+      <Glow />
+   </effect>
+</AnchorPane>
