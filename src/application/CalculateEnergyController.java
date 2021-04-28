@@ -1,4 +1,4 @@
-package FinalProjectFX.src.application;
+package application;
 
 public class CalculateEnergyController {
 
