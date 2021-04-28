@@ -1,4 +1,4 @@
-package FinalProjectFX.src.application;
+package application;
 
 import java.net.URL;
 
