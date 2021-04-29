@@ -1,11 +1,11 @@
 #Fitness-Pal App
 Team Zaela
 ***********
-    Zach Hernandez, 
-    Adittya Das, 
-    Elijah Moya, 
-    Loke Innocent, 
-    Allan Qi, 
+    Zach Hernandez
+    Adittya Das 
+    Elijah Moya 
+    Loke Innocent 
+    Allan Qi 
     
 Description of app
 *********************
@@ -17,7 +17,6 @@ Description of app
 Known Bug
 *************
 
-
 Login info
 ***********
     The first time you use Fitness-Pal begin with clicking the "Calculate" button found at the home screen and 
@@ -26,4 +25,6 @@ Login info
     
 Version Requirements
 **********************
-    Most up to date versions of SceneBuilder and Java are required and assure that JavaFX is available in your IDE.
+    Compatible version of Java, (Java8, jre8.0_221) or newer, and a version of JavaFx installed into your
+    IDE of choice. For editing of FXML files SceneBuilder 3 or above will be required.
+    
