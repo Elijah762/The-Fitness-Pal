@@ -18,7 +18,7 @@ public class BioData {
 	
 	
 	//converts hashmap from type <String, Arraylist> to type <String, String>
-	private static HashMap<String, String> stringifyMap(HashMap<String, ArrayList<String>> h) {
+	public static HashMap<String, String> stringifyMap(HashMap<String, ArrayList<String>> h) {
 		HashMap<String, String> stringedMap = new HashMap<String, String>();
 		
 		/* Iterates over each value in the hash map and converts each array list into a String using the toString method */

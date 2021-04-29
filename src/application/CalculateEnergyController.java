@@ -193,6 +193,7 @@ public class CalculateEnergyController {
     @FXML
     void femaleRadio(ActionEvent event) {
         mCheckbox.setSelected(false);
+
     }
 
     @FXML

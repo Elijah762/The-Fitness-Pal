@@ -65,11 +65,11 @@
       <TextField fx:id="heightFeetField" layoutX="175.0" layoutY="305.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="110.0" stylesheets="@application.css" />
       <TextField fx:id="heightInchField" layoutX="327.0" layoutY="305.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="110.0" stylesheets="@application.css" />
       <Button fx:id="calcBut" layoutX="75.0" layoutY="411.0" mnemonicParsing="false" onAction="#calculateButtonPushed" prefHeight="33.0" prefWidth="94.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Calculate" textFill="WHITE" />
-      <RadioButton fx:id="fCheckbox" layoutX="175.0" layoutY="171.0" mnemonicParsing="false" stylesheets="@application.css" text="Female" textFill="RED">
+      <RadioButton fx:id="fCheckbox" layoutX="175.0" layoutY="171.0" mnemonicParsing="false" onAction="#femaleRadio" stylesheets="@application.css" text="Female" textFill="RED">
          <font>
             <Font size="22.0" />
          </font></RadioButton>
-      <RadioButton fx:id="mCheckbox" layoutX="348.0" layoutY="170.0" mnemonicParsing="false" stylesheets="@application.css" text="Male" textFill="RED">
+      <RadioButton fx:id="mCheckbox" layoutX="348.0" layoutY="170.0" mnemonicParsing="false" onAction="#maleRadio" stylesheets="@application.css" text="Male" textFill="RED">
          <font>
             <Font size="22.0" />
          </font></RadioButton>
