@@ -1,10 +1,3 @@
-/* Allan Qi (jyg050) CS3443 Lab4 2021-3-2
-Controller for all .fxmls in this project
-
-I'd prefer making a new class for the item donation logic rather than
-having everything in this one, but the project specifically asks for 5
-deliverable files, so I condensed it into one */
-
 package application;
 
 import javafx.event.ActionEvent;
@@ -45,7 +38,7 @@ public class MainController {
 		}
     }
 	
-	// Change window to the Need screen
+	// Change window to the addfood screen
 	@FXML
     private void replaceSceneContentTwo(ActionEvent event){
 		Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -62,16 +55,18 @@ public class MainController {
 		}
     }
 
-	// Change window to the Inventory screen
+	// Change window to the Calendar screen
 	@FXML
     private void replaceSceneContentThree(ActionEvent event){
 		Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("Calendar.fxml"));
-			CalendarController newControl = new CalendarController();
+			AddFoodController newControl = new AddFoodController();
 			loader.setController(newControl);
 			AnchorPane root = (AnchorPane)loader.load();
 			primaryStage.getScene().setRoot(root);
+			newControl.init();
+
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

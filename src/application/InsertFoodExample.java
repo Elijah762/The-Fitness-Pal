@@ -8,11 +8,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Properties;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class InsertFoodExample {
 
@@ -169,5 +166,27 @@ public class InsertFoodExample {
 			// System.out.println("Exists!");
 		}
 	}
-	
+
+	public static void dateFood(String food) throws IOException {
+		HashMap<String, ArrayList<String>> h=new HashMap<String, ArrayList<String>>();
+		h = BioData.readProp("dates.properties");
+
+		Date today = new Date();
+		SimpleDateFormat ft = new SimpleDateFormat ("E/M/d/yyyy");
+
+		if(h.get(ft.format(today)) != null) {
+			h.get(ft.format(today)).add(food);
+		}
+		else {
+			ArrayList<String> temp = new ArrayList<String>();
+			temp.add(food);
+			h.put(ft.format(today), temp);
+		}
+
+		//addData(h, "dates.properties");
+		HashMap<String, String> stringifiedData= BioData.stringifyMap(h);
+		BioData.saveProp(stringifiedData, "dates.properties");
+
+
+	}
 }
