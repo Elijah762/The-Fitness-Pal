@@ -20,7 +20,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class AddFoodController{
+public class AddFoodController {
 
 	private InsertFoodExample foodObj = new InsertFoodExample();
 	private HashMap<String, ArrayList<Integer>> hm;

@@ -9,71 +9,71 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="500.0" styleClass="CalcEnergy" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalculateEnergyController">
    <children>
-      <Label alignment="TOP_CENTER" layoutX="81.0" layoutY="63.0" prefHeight="33.0" prefWidth="351.0" text="Calculate-Energy Expenditure" textFill="#3c16e4">
+      <Label alignment="TOP_CENTER" layoutX="81.0" layoutY="55.0" prefHeight="33.0" prefWidth="351.0" text="Calculate Energy Expenditure">
          <font>
-            <Font size="27.0" />
+            <Font name="Candara" size="27.0" />
          </font></Label>
-      <Label layoutX="52.0" layoutY="128.0" text="Name" textFill="#f80606">
+      <Label layoutX="76.0" layoutY="122.0" text="Name" textAlignment="RIGHT">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="76.0" layoutY="171.0" text="Sex" textFill="#e80505">
+      <Label layoutX="101.0" layoutY="162.0" text="Sex" textAlignment="RIGHT">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="75.0" layoutY="219.0" text="Age" textFill="#f80909">
+      <Label layoutX="97.0" layoutY="202.0" text="Age" textAlignment="RIGHT">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="46.0" layoutY="259.0" text="Weight" textFill="#ee0404">
+      <Label layoutX="66.0" layoutY="242.0" text="Weight" textAlignment="RIGHT">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="48.0" layoutY="301.0" text="Height" textFill="#f20606">
+      <Label layoutX="70.0" layoutY="282.0" text="Height" textAlignment="RIGHT">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="46.0" layoutY="344.0" prefHeight="23.0" prefWidth="76.0" text="Activity" textFill="#ee0606">
+      <Label layoutX="65.0" layoutY="322.0" prefHeight="23.0" prefWidth="76.0" text="Activity" textAlignment="RIGHT">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="444.0" layoutY="257.0" text="lb" textFill="#f80808">
+      <Label layoutX="424.0" layoutY="245.0" text="lb">
          <font>
-            <Font size="22.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="444.0" layoutY="301.0" text="in" textFill="#ee0606">
+      <Label layoutX="424.0" layoutY="285.0" text="in">
          <font>
-            <Font size="22.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="297.0" layoutY="302.0" prefHeight="21.0" prefWidth="20.0" text="ft" textFill="#f20808">
+      <Label layoutX="274.0" layoutY="285.0" prefHeight="21.0" prefWidth="20.0" text="ft">
          <font>
-            <Font size="22.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="nameField" layoutX="167.0" layoutY="131.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" stylesheets="@application.css" />
-      <TextField fx:id="ageField" layoutX="174.0" layoutY="219.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" stylesheets="@application.css" />
-      <TextField fx:id="weightField" layoutX="174.0" layoutY="259.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" stylesheets="@application.css" />
-      <TextField fx:id="activityField" layoutX="177.0" layoutY="347.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" stylesheets="@application.css" />
-      <TextField fx:id="heightFeetField" layoutX="175.0" layoutY="305.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="110.0" stylesheets="@application.css" />
-      <TextField fx:id="heightInchField" layoutX="327.0" layoutY="305.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="110.0" stylesheets="@application.css" />
-      <Button fx:id="calcBut" layoutX="75.0" layoutY="411.0" mnemonicParsing="false" onAction="#calculateButtonPushed" prefHeight="33.0" prefWidth="94.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Calculate" textFill="WHITE" />
-      <RadioButton fx:id="fCheckbox" layoutX="175.0" layoutY="171.0" mnemonicParsing="false" onAction="#femaleRadio" stylesheets="@application.css" text="Female" textFill="RED">
+      <TextField fx:id="nameField" layoutX="158.0" layoutY="127.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" stylesheets="@application.css" />
+      <TextField fx:id="ageField" layoutX="158.0" layoutY="207.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" stylesheets="@application.css" />
+      <TextField fx:id="weightField" layoutX="158.0" layoutY="247.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" stylesheets="@application.css" />
+      <TextField fx:id="heightFeetField" layoutX="158.0" layoutY="287.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="110.0" stylesheets="@application.css" />
+      <TextField fx:id="heightInchField" layoutX="308.0" layoutY="287.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="110.0" stylesheets="@application.css" />
+      <TextField fx:id="activityField" layoutX="158.0" layoutY="327.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" stylesheets="@application.css" />
+      <Button fx:id="calcBut" layoutX="200.0" layoutY="372.0" mnemonicParsing="false" onAction="#calculateButtonPushed" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Calculate" textFill="WHITE" />
+      <RadioButton fx:id="fCheckbox" layoutX="158.0" layoutY="165.0" mnemonicParsing="false" onAction="#femaleRadio" stylesheets="@application.css" text="Female">
          <font>
-            <Font size="22.0" />
+            <Font size="18.0" />
          </font></RadioButton>
-      <RadioButton fx:id="mCheckbox" layoutX="348.0" layoutY="170.0" mnemonicParsing="false" onAction="#maleRadio" stylesheets="@application.css" text="Male" textFill="RED">
+      <RadioButton fx:id="mCheckbox" layoutX="346.0" layoutY="165.0" mnemonicParsing="false" onAction="#maleRadio" stylesheets="@application.css" text="Male">
          <font>
-            <Font size="22.0" />
+            <Font size="18.0" />
          </font></RadioButton>
-      <Button fx:id="homeBut" layoutX="352.0" layoutY="415.0" mnemonicParsing="false" onAction="#homeButtonPushed" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Home" textFill="WHITE" />
-      <Label fx:id="caloriesOut" layoutX="180.0" layoutY="405.0" prefHeight="47.0" prefWidth="153.0" stylesheets="@application.css" wrapText="true" />
+      <Button fx:id="homeBut" layoutX="440.0" layoutY="456" mnemonicParsing="false" onAction="#homeButtonPushed" prefHeight="32.0" prefWidth="50.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Home" textFill="WHITE" />
+      <Label fx:id="caloriesOut" layoutX="175.0" layoutY="423.0" prefHeight="50.0" prefWidth="150.0" stylesheets="@application.css" wrapText="true" />
    </children>
 </AnchorPane>
