@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
@@ -19,15 +20,29 @@ public class FirstController /*implements Initializable */{
    // private Circle circleSalad;
 
     @FXML
-    void e4d9d9(ActionEvent event) {
+    private Button biometrics;
+
+    @FXML
+    private Button addFoodBut;
+
+    @FXML
+    private Button calendar;
+
+    @FXML
+    void biometButtonPushed(ActionEvent event) {
 
     }
 
     @FXML
-    void bc1a1a(ActionEvent event) {
+    void addButtonPushed(ActionEvent event) {
 
     }
-    
+
+    @FXML
+    void calendarButtonPushed(ActionEvent event) {
+
+    }
+
    /* public void initialize(URL url, ResourceBundle rb){
     	circleSalad.setStroke(Color.BLUEVIOLET);
     	Image im = new Image("/application/salad.jpg",false);
