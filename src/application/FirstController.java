@@ -13,10 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class FirstController /*implements Initializable */{
-
-   // @FXML
-   // private Circle circleSalad;
+public class FirstController {
 
     @FXML
     private Button biometrics;
@@ -61,18 +58,8 @@ public class FirstController /*implements Initializable */{
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(giveScene);
             window.show();
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
-   /* public void initialize(URL url, ResourceBundle rb){
-    	circleSalad.setStroke(Color.BLUEVIOLET);
-    	Image im = new Image("/application/salad.jpg",false);
-    	circleSalad.setFill(new ImagePattern(im));
-    	circleSalad.setEffect(new DropShadow(+25d, 0d, +2d, Color.DARKBLUE));
-    }
-    */
-    
-
 }

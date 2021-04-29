@@ -11,19 +11,15 @@ public class Person
 	private static boolean isImperial;
 	private static String activityLevel;
 	
-	public Person(String w, String h, String a, String s, String m, String activity)
+	public Person(double w, int h, int a, char s, String m, String activity)
 	{
-		double editedW = Double.parseDouble(w);
-		weight = editedW;
-		
-		double editedH = Double.parseDouble(h);
-		height = editedH;
-		
-		int editedA = Integer.parseInt(a);
-		age = editedA;
-		
-		char editedS = s.charAt(0);
-		sex = editedS;
+		weight = w;
+
+		height = h;
+
+		age = a;
+
+		sex = s;
 		
 		boolean editedM = Boolean.parseBoolean(m);
 		isImperial = editedM;

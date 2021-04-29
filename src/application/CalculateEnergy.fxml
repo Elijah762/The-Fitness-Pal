@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="500.0" styleClass="CalcEnergy" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalculateEnergyController">
+<AnchorPane prefHeight="500.0" prefWidth="500.0" styleClass="CalcEnergy" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalculateEnergyController">
    <children>
       <Label alignment="TOP_CENTER" layoutX="81.0" layoutY="63.0" prefHeight="33.0" prefWidth="351.0" text="Calculate-Energy Expenditure" textFill="#3c16e4">
          <font>
@@ -58,20 +58,24 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <TextField layoutX="167.0" layoutY="131.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" />
-      <TextField layoutX="174.0" layoutY="219.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" />
-      <TextField layoutX="174.0" layoutY="259.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" />
-      <TextField layoutX="177.0" layoutY="347.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" />
-      <TextField layoutX="175.0" layoutY="305.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="110.0" />
-      <TextField layoutX="327.0" layoutY="305.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="110.0" />
-      <Button layoutX="213.0" layoutY="411.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="94.0" style="-fx-background-color: Grey;" text="Calculate" textFill="WHITE" />
-      <RadioButton layoutX="175.0" layoutY="171.0" mnemonicParsing="false" text="Female" textFill="RED">
+      <TextField fx:id="nameField" layoutX="167.0" layoutY="131.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" stylesheets="@application.css" />
+      <TextField fx:id="ageField" layoutX="174.0" layoutY="219.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" stylesheets="@application.css" />
+      <TextField fx:id="weightField" layoutX="174.0" layoutY="259.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" stylesheets="@application.css" />
+      <TextField fx:id="activityField" layoutX="177.0" layoutY="347.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="260.0" stylesheets="@application.css" />
+      <TextField fx:id="heightFeetField" layoutX="175.0" layoutY="305.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="110.0" stylesheets="@application.css" />
+      <TextField fx:id="heightInchField" layoutX="327.0" layoutY="305.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="110.0" stylesheets="@application.css" />
+      <Button fx:id="calcBut" layoutX="75.0" layoutY="411.0" mnemonicParsing="false" onAction="#calculateButtonPushed" prefHeight="33.0" prefWidth="94.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Calculate" textFill="WHITE" />
+      <RadioButton fx:id="fCheckbox" layoutX="175.0" layoutY="171.0" mnemonicParsing="false" stylesheets="@application.css" text="Female" textFill="RED">
          <font>
             <Font size="22.0" />
          </font></RadioButton>
-      <RadioButton layoutX="348.0" layoutY="170.0" mnemonicParsing="false" text="Male" textFill="RED">
+      <RadioButton fx:id="mCheckbox" layoutX="348.0" layoutY="170.0" mnemonicParsing="false" stylesheets="@application.css" text="Male" textFill="RED">
          <font>
             <Font size="22.0" />
          </font></RadioButton>
+      <Button fx:id="calendar" layoutX="352.0" layoutY="444.0" mnemonicParsing="false" onAction="#calendarButtonPushed" prefHeight="23.0" prefWidth="76.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Calendar" textFill="WHITE" />
+      <Button fx:id="addFoodBut" layoutX="352.0" layoutY="385.0" mnemonicParsing="false" onAction="#addButtonPushed" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Add Meals" textFill="WHITE" />
+      <Button fx:id="homeBut" layoutX="352.0" layoutY="415.0" mnemonicParsing="false" onAction="#homeButtonPushed" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Home" textFill="WHITE" />
+      <Label fx:id="caloriesOut" layoutX="180.0" layoutY="405.0" prefHeight="47.0" prefWidth="153.0" stylesheets="@application.css" wrapText="true" />
    </children>
 </AnchorPane>

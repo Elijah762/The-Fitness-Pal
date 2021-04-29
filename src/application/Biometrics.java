@@ -23,14 +23,14 @@ public class Biometrics
 	
 	static final String personFile = "person.properties";
 	
-	public static void saveUserData(String name, int calories)
+	public static void saveUserData(int calories)
 	{
 		HashMap<String, String> personData = new HashMap<String, String>();
-		personData.put(name, "" + calories);
+		personData.put("user", "" + calories);
 		Properties properties = new Properties();
 		try {
 			properties.putAll(personData);
-			File file = new File(name+".properties");
+			File file = new File("user.properties");
 			FileOutputStream writer;
 
 			writer = new FileOutputStream(file, true);
@@ -44,7 +44,7 @@ public class Biometrics
 	public static int calculateBMR(HashMap<String, ArrayList<String>> h, String username)
 	{
 		int calories;
-		
+
 		if(!(h.containsKey(username)))
 			return 0;
 
