@@ -191,6 +191,16 @@ public class CalculateEnergyController {
     }
 
     @FXML
+    void femaleRadio(ActionEvent event) {
+        mCheckbox.setSelected(false);
+    }
+
+    @FXML
+    void maleRadio(ActionEvent event) {
+        fCheckbox.setSelected(false);
+    }
+
+    @FXML
     void homeButtonPushed(ActionEvent event) {
         try {
             AnchorPane give = (AnchorPane) FXMLLoader.load(getClass().getResource("First.fxml"));
