@@ -9,7 +9,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: ALICEBLUE;" styleClass="bodybg" stylesheets="@application.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FirstController">
+<AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: ALICEBLUE;" styleClass="bodybg" stylesheets="@application.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
       <Label alignment="CENTER" layoutX="85.0" layoutY="74.0" prefHeight="172.0" prefWidth="330.0" text="FitnesPal">
          <font>
@@ -27,9 +27,9 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Button fx:id="addFoodBut" layoutX="97.0" layoutY="297.0" mnemonicParsing="false" onAction="#addButtonPushed" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: CORNFLOWERBLUE CORNFLOWERBLUE;" stylesheets="@application.css" text="Add Meals" textFill="#e4d9d9" />
-      <Button fx:id="calendar" layoutX="268.0" layoutY="298.0" mnemonicParsing="false" onAction="#calendarButtonPushed" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: CORNFLOWERBLUE CORNFLOWERBLUE;" stylesheets="@application.css" text="Calendar" textFill="#e4d9d9" />
-      <Button id="biometrics" fx:id="biometrics" layoutX="193.0" layoutY="246.0" mnemonicParsing="false" onAction="#bioButtonPushed" prefWidth="78.0" style="-fx-background-color: CORNFLOWERBLUE CORNFLOWERBLUE CORNFLOWERBLUE CORNFLOWERBLUE;" stylesheets="@application.css" text="Calculate" textFill="#e4d9d9" />
+      <Button fx:id="addFoodBut" layoutX="97.0" layoutY="297.0" mnemonicParsing="false" onAction="#replaceSceneContentTwo" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: CORNFLOWERBLUE CORNFLOWERBLUE;" stylesheets="@application.css" text="Add Meals" textFill="#e4d9d9" />
+      <Button fx:id="calendar" layoutX="268.0" layoutY="298.0" mnemonicParsing="false" onAction="#replaceSceneContentThree" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: CORNFLOWERBLUE CORNFLOWERBLUE;" stylesheets="@application.css" text="Calendar" textFill="#e4d9d9" />
+      <Button id="biometrics" fx:id="biometrics" layoutX="193.0" layoutY="246.0" mnemonicParsing="false" onAction="#replaceSceneContentOne" prefWidth="78.0" style="-fx-background-color: CORNFLOWERBLUE CORNFLOWERBLUE CORNFLOWERBLUE CORNFLOWERBLUE;" stylesheets="@application.css" text="Calculate" textFill="#e4d9d9" />
    </children>
    <effect>
       <Glow />

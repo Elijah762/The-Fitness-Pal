@@ -191,36 +191,10 @@ public class CalculateEnergyController {
     }
 
     @FXML
-    public void addButtonPushed(ActionEvent event) {
-        try {
-            AnchorPane give = (AnchorPane) FXMLLoader.load(getClass().getResource("AddFoods.fxml"));
-            Scene giveScene = new Scene(give, 442, 213);
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(giveScene);
-            window.show();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
-    void calendarButtonPushed(ActionEvent event) {
-        try {
-            AnchorPane give = (AnchorPane) FXMLLoader.load(getClass().getResource("Calendar.fxml"));
-            Scene giveScene = new Scene(give, 442, 213);
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(giveScene);
-            window.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
     void homeButtonPushed(ActionEvent event) {
         try {
             AnchorPane give = (AnchorPane) FXMLLoader.load(getClass().getResource("First.fxml"));
-            Scene giveScene = new Scene(give, 442, 213);
+            Scene giveScene = new Scene(give, 500, 500);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(giveScene);
             window.show();

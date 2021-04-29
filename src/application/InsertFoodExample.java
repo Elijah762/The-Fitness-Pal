@@ -5,12 +5,13 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Properties;
 
 public class InsertFoodExample {
@@ -136,8 +137,37 @@ public class InsertFoodExample {
 		return hm;
 	}
 	
+	// returns just the ArrayList<Integer> of an associated food (String)
+	public ArrayList<Integer> getSpecificFood(String name){
+		return hm.get(name);
+	}
+	
+	// prints the content
 	public void printContents(){
 		System.out.println(hm);
+	}
+	
+	// load a bunch of preexisting data into the food hashmap
+	public void initializePresetData(){
+		Path p = Paths.get(".\\" + propertiesName);
+		boolean exists = Files.exists(p);
+		
+		// if the properties file doesn't exist, pre-populate it with some example foods
+		if(!exists){
+			// System.out.println("Doesn't exist!");
+			addFood("Apple", 95, 25, 0, 0);
+			addFood("Orange", 45, 11, 0, 0);
+			addFood("Banana", 110, 23, 0, 0);
+			addFood("Chicken breast (40g, cooked)", 160, 0, 39, 1);
+			addFood("Almonds (28g)", 170, 6, 6, 15);
+			addFood("Peanuts (28g)", 170, 4, 7, 14);
+			addFood("Whole milk (240g)", 150, 12, 8, 8);
+			saveFoodData();
+		}
+		else{
+			// do nothing
+			// System.out.println("Exists!");
+		}
 	}
 	
 }

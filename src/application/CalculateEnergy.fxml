@@ -73,8 +73,6 @@
          <font>
             <Font size="22.0" />
          </font></RadioButton>
-      <Button fx:id="calendar" layoutX="352.0" layoutY="444.0" mnemonicParsing="false" onAction="#calendarButtonPushed" prefHeight="23.0" prefWidth="76.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Calendar" textFill="WHITE" />
-      <Button fx:id="addFoodBut" layoutX="352.0" layoutY="385.0" mnemonicParsing="false" onAction="#addButtonPushed" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Add Meals" textFill="WHITE" />
       <Button fx:id="homeBut" layoutX="352.0" layoutY="415.0" mnemonicParsing="false" onAction="#homeButtonPushed" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Home" textFill="WHITE" />
       <Label fx:id="caloriesOut" layoutX="180.0" layoutY="405.0" prefHeight="47.0" prefWidth="153.0" stylesheets="@application.css" wrapText="true" />
    </children>
