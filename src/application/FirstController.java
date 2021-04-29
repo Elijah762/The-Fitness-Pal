@@ -6,13 +6,12 @@ import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.effect.DropShadow;
-import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.ImagePattern;
-import javafx.scene.shape.Circle;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class FirstController /*implements Initializable */{
 
@@ -29,18 +28,42 @@ public class FirstController /*implements Initializable */{
     private Button calendar;
 
     @FXML
-    void biometButtonPushed(ActionEvent event) {
-
+    void bioButtonPushed(ActionEvent event) {
+        try {
+            AnchorPane give = (AnchorPane) FXMLLoader.load(getClass().getResource("CalculateEnergy.fxml"));
+            Scene giveScene = new Scene(give, 442, 213);
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(giveScene);
+            window.show();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void addButtonPushed(ActionEvent event) {
-
+            try {
+                AnchorPane give = (AnchorPane) FXMLLoader.load(getClass().getResource("AddFoods.fxml"));
+                Scene giveScene = new Scene(give, 442, 213);
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                window.setScene(giveScene);
+                window.show();
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
     }
 
     @FXML
     void calendarButtonPushed(ActionEvent event) {
-
+        try {
+            AnchorPane give = (AnchorPane) FXMLLoader.load(getClass().getResource("Calendar.fxml"));
+            Scene giveScene = new Scene(give, 442, 213);
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(giveScene);
+            window.show();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
    /* public void initialize(URL url, ResourceBundle rb){
