@@ -61,11 +61,10 @@ public class MainController {
 		Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("Calendar.fxml"));
-			AddFoodController newControl = new AddFoodController();
+			CalendarController newControl = new CalendarController();
 			loader.setController(newControl);
 			AnchorPane root = (AnchorPane)loader.load();
 			primaryStage.getScene().setRoot(root);
-			newControl.init();
 
 		} catch(Exception e) {
 			e.printStackTrace();

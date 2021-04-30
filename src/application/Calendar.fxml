@@ -1,25 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TableView layoutX="1.0" layoutY="44.0" prefHeight="463.0" prefWidth="500.0" styleClass="AddEnergy">
-        <columns>
-          <TableColumn prefWidth="71.0" text="SUN" />
-          <TableColumn prefWidth="71.0" text="MON" />
-            <TableColumn prefWidth="71.0" text="TUE" />
-            <TableColumn prefWidth="71.0" text="WED" />
-            <TableColumn prefWidth="71.0" text="THUR" />
-            <TableColumn prefWidth="71.0" text="FRI" />
-            <TableColumn prefWidth="71.0" text="SAT" />
-        </columns>
-      </TableView>
-      <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="159.0" text="Weekly Total Intake" />
-      <Button layoutX="412.0" layoutY="8.0" mnemonicParsing="false" text="Home" />
+      <Label layoutX="7.0" layoutY="446.0" prefHeight="21.0" prefWidth="159.0" text="Weekly Total Intake:" />
+      <Button fx:id="ButtonHome" layoutX="440.0" layoutY="456" mnemonicParsing="false" onAction="#replaceSceneContentHome" prefHeight="32.0" prefWidth="50.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Home" textFill="WHITE" />
+      <Text fx:id="CalendarWeeklyNumber" layoutX="122.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;insertnumber&gt;" />
+      <ListView fx:id="sunBox" layoutX="7.0" layoutY="103.0" prefHeight="340.0" prefWidth="67.0" />
+      <ListView fx:id="monBox" layoutX="77.0" layoutY="103.0" prefHeight="340.0" prefWidth="67.0" />
+      <ListView fx:id="tueBox" layoutX="147.0" layoutY="103.0" prefHeight="340.0" prefWidth="67.0" />
+      <ListView fx:id="wedBox" layoutX="217.0" layoutY="103.0" prefHeight="340.0" prefWidth="67.0" />
+      <ListView fx:id="thuBox" layoutX="287.0" layoutY="103.0" prefHeight="340.0" prefWidth="67.0" />
+      <ListView fx:id="friBox" layoutX="357.0" layoutY="103.0" prefHeight="340.0" prefWidth="67.0" />
+      <ListView fx:id="satBox" layoutX="427.0" layoutY="103.0" prefHeight="340.0" prefWidth="67.0" />
+      <Label layoutX="21.0" layoutY="79.0" text="Sunday" />
+      <Label layoutX="89.0" layoutY="79.0" text="Monday" />
+      <Label layoutX="159.0" layoutY="79.0" text="Tuesday" />
+      <Label layoutX="220.0" layoutY="79.0" text="Wednesday" />
+      <Label layoutX="296.0" layoutY="79.0" text="Thursday" />
+      <Label layoutX="375.0" layoutY="79.0" text="Friday" />
+      <Label layoutX="437.0" layoutY="79.0" text="Saturday" />
+      <Label layoutX="21.0" layoutY="52.0" prefHeight="21.0" prefWidth="67.0" text="Week of: " />
+      <Text fx:id="weekString" layoutX="79.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;insertstring&gt;" />
+      <Label layoutX="200.0" layoutY="12.0" text="Calendar">
+         <font>
+            <Font name="Candara" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="467.0" prefHeight="21.0" prefWidth="173.0" text="Recommended Weekly Intake:" />
+      <Text fx:id="userIntake" layoutX="181.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;insertstring&gt;" />
+      <Label layoutX="270.0" layoutY="467.0" prefHeight="21.0" prefWidth="159.0" text="Weekly Delta:" />
+      <Text fx:id="deltaText" layoutX="349.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;insertstring&gt;" />
    </children>
 </AnchorPane>

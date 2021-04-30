@@ -10,7 +10,7 @@
    <children>
       <TabPane layoutX="1.0" layoutY="50.0" prefHeight="394.0" prefWidth="500.0">
         <tabs>
-          <Tab fx:id="DatabaseTab" text="Database">
+          <Tab fx:id="DatabaseTab" closable="false" text="Database">
                <content>
                   <AnchorPane prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: LIGHTGREY;">
                      <children>
@@ -37,7 +37,7 @@
                   </AnchorPane>
                </content>
             </Tab>
-          <Tab text="Custom Entry">
+          <Tab closable="false" text="Custom Entry">
                <content>
                   <AnchorPane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: LIGHTGRAY;">
                      <children>

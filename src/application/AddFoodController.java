@@ -22,7 +22,7 @@ import javafx.stage.Stage;
 
 public class AddFoodController {
 
-	private InsertFoodExample foodObj = new InsertFoodExample();
+	private FoodModel foodObj = new FoodModel();
 	private HashMap<String, ArrayList<Integer>> hm;
 	
     @FXML
@@ -126,7 +126,7 @@ public class AddFoodController {
     	// call Calendar's dateFood() method qty times
     	for(int i = 0; i < qty; i++){
     		try {
-				InsertFoodExample.dateFood(selectedFood);
+				FoodModel.dateFood(selectedFood);
 			} catch (IOException e) {
 				System.out.println("Error calling dateFood() from Calendar class");
 				e.printStackTrace();

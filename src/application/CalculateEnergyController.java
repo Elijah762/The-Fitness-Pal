@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
@@ -38,7 +39,7 @@ public class CalculateEnergyController {
     private TextField weightField;
 
     @FXML
-    private TextField activityField;
+    private ComboBox activityField;
 
     @FXML
     private TextField heightFeetField;
@@ -81,12 +82,12 @@ public class CalculateEnergyController {
         int calories = Biometrics.calculateBMR(personData, name);
 
         Biometrics.saveUserData(calories);
-        caloriesOut.setText("Your recommended daily calorie intake is " + calories + "cal.");
+        caloriesOut.setText("Your recommended daily calorie intake is " + calories + "Cal.");
 
         resetVal();
     }
 
-    /* Chekcs that that all fields are valid */
+    /* Checks that that all fields are valid */
     private boolean getVals() {
         if(!getName())
             return false;
@@ -167,9 +168,9 @@ public class CalculateEnergyController {
     }
 
     private boolean getActivity() {
-        activity = activityField.getText().trim().toLowerCase(Locale.ROOT);
+        activity = (String)activityField.getSelectionModel().getSelectedItem();
         if(activity.equals("")) {
-            caloriesOut.setText("Please Enter value in activity field.");
+            caloriesOut.setText("Please enter a value in the activity field.");
             return false;
         }
         //if user did not enter defined values print error and return false
@@ -192,7 +193,6 @@ public class CalculateEnergyController {
         ageField.clear();
         heightFeetField.clear();
         heightInchField.clear();
-        activityField.clear();
         weightField.clear();
     }
 
