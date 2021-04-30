@@ -26,8 +26,13 @@ How to run
     
 Known Bug
 *************
-There exists possible instances where food names with multiple names may not properly appear on the calender as 
+1. There exists possible instances where food names with multiple names may not properly appear on the calender as 
 the properties file that stores food data may add extranious values where the space should be.
+2. Fitness-Pal was compiled in javaFX-16 and will prompt a yes/no upon launch if the user does not have javaFX-16 installed.
+   If the user selects yes app should run as usual.
+3. When attempting to run the app module-info.java may prevent launch. This may be a windows vs mac environment error or an error in
+   the Eclipse IDE
+4. Mac vs. Windows environment mismatches in the code may restirct functions of app
 
 Login info
 ***********
@@ -37,6 +42,6 @@ Login info
     
 Version Requirements
 **********************
-    Compatible version of Java, (Java8, jre8.0_221) or newer, and a version of JavaFx installed into your
+    Compatible version of Java, (Java8, jre8.0_221) or newer, and JavaFx-16 installed into your
     IDE of choice. For editing of FXML files SceneBuilder 3 or above will be required.
     
