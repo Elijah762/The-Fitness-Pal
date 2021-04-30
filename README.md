@@ -24,7 +24,7 @@ How to run
    the app.
 5. Enjoy Fitness-Pal!
     
-Known Bug
+Known Bugs
 *************
 1. There exists possible instances where food names with multiple names may not properly appear on the calender as 
 the properties file that stores food data may add extranious values where the space should be.
