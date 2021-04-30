@@ -100,13 +100,13 @@ public class CalendarController{
 		CalendarWeeklyNumber.setText(days[7]);
 		
 		// get weekly calorie recommendation
-		File f = new File (".\\user.properties");
+		File f = new File ("user.properties");
 		
 		if(f.exists()) {
 			String usersInfo = "0";
 			FileInputStream reader;
 			try {
-				reader = new FileInputStream(".\\user.properties");
+				reader = new FileInputStream("user.properties");
 				Properties properties = new Properties();
 				properties.load(reader);
 				usersInfo = (String)properties.get("user");
