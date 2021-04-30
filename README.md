@@ -14,8 +14,20 @@ Description of app
     daily caloric intake based on your Biometrics and allows you to input your meals for the day into an easy to read 
     daily calendar that tracks calories eaten compared to your recommended caloric intake on a weekly basis.  
     
+How to run
+**************
+1. Assure your machine meets all the Version Requirements listed at the bottom of this read me file. 
+2. Download the zip file of this repository and open it in your desired IDE.
+3. If running on Windows be sure that line 103 and line 109 may need to be changed to have ".\\"
+   added to the front of user.properties, however this should only be done if "Recommended Weekly Intake" produces an error.
+4. Assure that the properties files named "user.properties", "foodData.properties", and "dates.properties" exist before running
+   the app.
+5. Enjoy Fitness-Pal!
+    
 Known Bug
 *************
+There exists possible instances where food names with multiple names may not properly appear on the calender as 
+the properties file that stores food data may add extranious values where the space should be.
 
 Login info
 ***********
