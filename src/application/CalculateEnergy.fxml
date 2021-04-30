@@ -1,48 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.collections.FXCollections ?>
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="500.0" styleClass="CalcEnergy" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalculateEnergyController">
+<AnchorPane prefHeight="500.0" prefWidth="500.0" styleClass="bodybg" stylesheets="@application.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalculateEnergyController">
    <children>
-      <Label alignment="TOP_CENTER" layoutX="81.0" layoutY="55.0" prefHeight="33.0" prefWidth="351.0" text="Calculate Energy Expenditure">
+      <Label alignment="TOP_CENTER" layoutX="81.0" layoutY="55.0" prefHeight="33.0" prefWidth="351.0" text="Calculate Energy Expenditure" textFill="WHITE">
          <font>
             <Font name="Candara" size="27.0" />
          </font></Label>
-      <Label layoutX="76.0" layoutY="122.0" text="Name" textAlignment="RIGHT">
+      <Label layoutX="76.0" layoutY="122.0" text="Name" textAlignment="RIGHT" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="101.0" layoutY="162.0" text="Sex" textAlignment="RIGHT">
+      <Label layoutX="101.0" layoutY="162.0" text="Sex" textAlignment="RIGHT" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="97.0" layoutY="202.0" text="Age" textAlignment="RIGHT">
+      <Label layoutX="97.0" layoutY="202.0" text="Age" textAlignment="RIGHT" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="66.0" layoutY="242.0" text="Weight" textAlignment="RIGHT">
+      <Label layoutX="66.0" layoutY="242.0" text="Weight" textAlignment="RIGHT" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="70.0" layoutY="282.0" text="Height" textAlignment="RIGHT">
+      <Label layoutX="70.0" layoutY="282.0" text="Height" textAlignment="RIGHT" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="65.0" layoutY="322.0" prefHeight="23.0" prefWidth="76.0" text="Activity" textAlignment="RIGHT">
+      <Label layoutX="65.0" layoutY="322.0" prefHeight="23.0" prefWidth="76.0" text="Activity" textAlignment="RIGHT" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
@@ -79,15 +78,15 @@
 	     </items>
 		</ComboBox>
       <Button fx:id="calcBut" layoutX="200.0" layoutY="372.0" mnemonicParsing="false" onAction="#calculateButtonPushed" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Calculate" textFill="WHITE" />
-      <RadioButton fx:id="fCheckbox" layoutX="158.0" layoutY="165.0" mnemonicParsing="false" onAction="#femaleRadio" stylesheets="@application.css" text="Female">
+      <RadioButton fx:id="fCheckbox" layoutX="158.0" layoutY="165.0" mnemonicParsing="false" onAction="#femaleRadio" stylesheets="@application.css" text="Female" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font></RadioButton>
-      <RadioButton fx:id="mCheckbox" layoutX="346.0" layoutY="165.0" mnemonicParsing="false" onAction="#maleRadio" stylesheets="@application.css" text="Male">
+      <RadioButton fx:id="mCheckbox" layoutX="346.0" layoutY="165.0" mnemonicParsing="false" onAction="#maleRadio" stylesheets="@application.css" text="Male" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font></RadioButton>
-      <Button fx:id="homeBut" layoutX="440.0" layoutY="456" mnemonicParsing="false" onAction="#homeButtonPushed" prefHeight="32.0" prefWidth="50.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Home" textFill="WHITE" />
-      <Label fx:id="caloriesOut" layoutX="175.0" layoutY="423.0" prefHeight="50.0" prefWidth="150.0" stylesheets="@application.css" wrapText="true" />
+      <Button fx:id="homeBut" layoutX="414.0" layoutY="456" mnemonicParsing="false" onAction="#homeButtonPushed" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: Grey;" stylesheets="@application.css" text="Home" textFill="WHITE" />
+      <Label fx:id="caloriesOut" layoutX="175.0" layoutY="423.0" prefHeight="50.0" prefWidth="150.0" stylesheets="@application.css" textFill="WHITE" wrapText="true" />
    </children>
 </AnchorPane>
