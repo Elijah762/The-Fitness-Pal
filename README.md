@@ -26,8 +26,7 @@ How to run
     
 Known Bugs
 *************
-1. There exists possible instances where food names with multiple names may not properly appear on the calender as 
-the properties file that stores food data may add extranious values where the space should be.
+1. Food names with commas will have the commas replaced with spaces 
 2. Fitness-Pal was compiled in javaFX-16 and will prompt a yes/no upon launch if the user does not have javaFX-16 installed.
    If the user selects yes app should run as usual.
 3. When attempting to run the app module-info.java may prevent launch. This may be a windows vs mac environment error or an error in
