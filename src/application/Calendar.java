@@ -19,7 +19,7 @@ public class Calendar {
 	private HashMap<String, ArrayList<Integer>> foods = new HashMap<String, ArrayList<Integer>>();
 	//private HashMap<String, ArrayList<String>> usersInfo = new HashMap<String, ArrayList<String>>();
 	
-	
+	// creates an entry in the dates.properties file with today's date and the given food
 	public void dateFood(String food) throws IOException {
 		HashMap<String, ArrayList<String>> h=new HashMap<String, ArrayList<String>>();
 		h = readProp("dates.properties");
@@ -36,13 +36,13 @@ public class Calendar {
 			h.put(ft.format(today), temp);
 		}
 		
-		//addData(h, "dates.properties");
 		HashMap<String, String> stringifiedData= stringifyMap(h);
 		saveProp(stringifiedData, "dates.properties");
 		
 		
 	}
 	
+	// saves the hashmap back into the properties file
 	public static void saveProp(HashMap<String, String> h, String fileName) {
 		Properties properties = new Properties();
 		try {
@@ -58,6 +58,7 @@ public class Calendar {
 		}
 	}
 	
+	// reads the prop file into the hash map
 	public static HashMap<String, ArrayList<String>> readProp(String fileName) {
 		HashMap<String, ArrayList<String>> h = new HashMap<String, ArrayList<String>>();
 		Properties properties = new Properties();
@@ -101,19 +102,12 @@ public class Calendar {
 		return stringedMap;
 	}
 	
-
-	public void getDays(String fullDate){
-		dates = readProp("dates.properties");
-		foods = foodData.getFoodData();
-		//usersInfo = InsertFoodExample.readProp("persons.properties");
-		
-		String[] today = fullDate.split("."); 
-		
+	
+	// function finds how many days it takes to shift backwards to sunday from the current date
+	public int findSundaySwitch(String today) {
 		int num = 0;
-		String startDate;
 		
-		// to get to Sunday switch
-		switch(today[0]) {
+		switch(today) {
 		case("Sun"):
 			num = 0;
 			break;
@@ -138,34 +132,65 @@ public class Calendar {
 		default:
 		}
 		
-		startDate = shiftDate(fullDate, num);
+		return num;
+	}
+	
+	// gets the reports for each day and the weekly total and stores them in days[]. this is the main function pretty much
+	public String[] getDays(String fullDate){
+		dates = readProp("dates.properties");
+		foodData.initializePresetData(); // checks if there is a properties file and makes one if there isn't
+		foodData.loadFoodData(); // loads properties file
+		foodData.getFoodData(); // return the hashmap
 		
+		foods = foodData.getFoodData();
+		String days[] = {"error", "error", "error", "error", "error", "error", "error", "0"};
+		
+		String[] today = fullDate.split("/"); 
+		
+		int num = 0;
+		String startDate;
+		
+		num = findSundaySwitch(today[0]);
+		
+		startDate = shiftDate(fullDate, num);
+		int weeklyTotal = 0;
+		
+		// used to traverse the week and get the reports for each day
 		for(int i = 0; i < 7; ++i) {
-			printCalendar(getReport(shiftDate(startDate, i)), startDate);
+			days[i] = getReport(shiftDate(startDate, i))[0];
+			weeklyTotal += Integer.parseInt(getReport(shiftDate(startDate, i))[1]);
 		}
+		
+		String weekTotStr = Integer.toString(weeklyTotal);
+		days[7] = weekTotStr;
+		return days;
 		
 	}
 	
-	public String getReport(String day) {
+	
+	// gets a complete report for each day of the week and gets the weekly calorie total
+	public String[] getReport(String day) {
 		
 		int total = 0;
-		String report = "";
+		String[] report = {"", "0"};
 		
-		for (int i = 0; i < dates.get(day).size(); i++) {
-			String temp = dates.get(day).get(i); // finds the ith food for day
-			report += temp + "- " + foods.get(temp).get(0) + " Cal" + "\n";
-            total += foods.get(temp).get(0); // add calories of the ith food for the day to the total
+		if(! dates.containsKey(day)) {
+			return report;
 		}
-		report += "Total: " + Integer.toString(total) + " Cal";
+		
+		for(int i = 0; i < dates.get(day).size(); ++i){
+			String temp = dates.get(day).get(i); // finds the ith food for day
+			report[0] += temp + " - " + foods.get(temp).get(0) + " Cal" + "\n\n";
+			total += foods.get(temp).get(0); // add calories of the ith food for the day to the total
+		}
+		
+		report[0] += "Total: " + Integer.toString(total) + " Cal";
+		report[1] = Integer.toString(total);
 		return report;
 		
 	}
 	
-	public void printCalendar(String report, String day) {
-		
-		System.out.println(day + "\n" + report);
-	}
-	
+	// adjusts the month if it is over 12 or under 1 and adjusts the year accordingly
 	public int[] monthBound(int month, int year) {
 		
 		int monYr[] = {month, year};
@@ -185,56 +210,78 @@ public class Calendar {
 		return monYr;
 	}
 	
+	// shifts the day name based on the shift
 	public String shiftDayName(String name, int shift) {
 		int num = 0;
+		String name2 = "";
 		
-		for(int i = 0; i < 2; ++i) {
+		// converts the name to a numerical value 0 to 6
 			switch(name) {
-			case("Sun"):
+			case "Sun":
 				num = 0;
-				name = "Sun";
 				break;
-			case("Mon"):
+			case "Mon":
 				num = 1;
-				name = "Mon";
 				break;
-			case("Tue"):
+			case "Tue":
 				num = 2;
-				name = "Tue";
 				break;
-			case("Wed"):
+			case "Wed":
 				num = 3;
-				name = "Wed";
 				break;
-			case("Thu"):
+			case "Thu":
 				num = 4;
-				name = "Thu";
 				break;
-			case("Fri"):
+			case "Fri":
 				num = 5;
-				name = "Fri";
 				break;
-			case("Sat"):
+			case "Sat":
 				num = 6;
-				name = "Sat";
 				break;
 			default:
 			}
-			if(i == 0) {
-				num += shift;
-			}
+			
+			// shifts the numerical value of the week day
+			num += shift;
+			
+			// checks if the numerical value of the week day within bounds adjusts it if it isn't
 			if(num < 0) {
 				num = num + 7;
 			}
 			else if(num > 6) {
 				num = num - 7;
 			}
-		}
-		return name;
+			
+			// finds the shifted name to be returned
+			switch(num) {
+			case 0:
+				name2 = "Sun";
+				break;
+			case 1:
+				name2 = "Mon";
+				break;
+			case 2:
+				name2 = "Tue";
+				break;
+			case 3:
+				name2 = "Wed";
+				break;
+			case 4:
+				name2 = "Thu";
+				break;
+			case 5:
+				name2 = "Fri";
+				break;
+			case 6:
+				name2 = "Sat";
+				break;
+			default:
+			}
+			
+		return name2;
 	}
 	
-	
-	
+	// algorithm that generates a date which is shifted a certain amount (shift) from the original date (fullDate)
 	public String shiftDate(String fullDate, int shift) {
 		String[] today = fullDate.split("/"); //0 = day name, 1 = month, 2 = day number, 3 = year
 		String sDate = "";
@@ -289,7 +336,7 @@ public class Calendar {
 			month -= 1;
 		}
 		else if(dayNum > maxDays[1]) {
-			dayNum = dayNum - maxDays[2];
+			dayNum = dayNum - maxDays[2] + 1;
 			month += 1;
 		}
 		
