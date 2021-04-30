@@ -1,5 +1,9 @@
 package application;
-
+/*
+    Author: Elijah Moya
+    Date: 4-21-2021
+    controller class for Calculator scene
+*/
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -63,6 +67,7 @@ public class CalculateEnergyController {
     @FXML
     private Label caloriesOut;
 
+    /* When calculate button pushed read data fields and output recommended calories */
     @FXML
     public void calculateButtonPushed(ActionEvent event) {
         if(!getVals())//reads in user entered values and if missing values end action
@@ -81,6 +86,7 @@ public class CalculateEnergyController {
         resetVal();
     }
 
+    /* Chekcs that that all fields are valid */
     private boolean getVals() {
         if(!getName())
             return false;
@@ -190,10 +196,10 @@ public class CalculateEnergyController {
         weightField.clear();
     }
 
+    /* Radio actions allow only one button to be pressed at once */
     @FXML
     void femaleRadio(ActionEvent event) {
         mCheckbox.setSelected(false);
-
     }
 
     @FXML
@@ -201,6 +207,7 @@ public class CalculateEnergyController {
         fCheckbox.setSelected(false);
     }
 
+    /* returns to home page */
     @FXML
     void homeButtonPushed(ActionEvent event) {
         try {

@@ -1,3 +1,8 @@
+/*
+	Author: Elijah Moya
+	Date: 4-29-2021
+	Calculates Calories given necessary data
+ */
 package application;
 
 import java.io.File;
@@ -22,7 +27,8 @@ public class Biometrics
 	static final double EXTRA_MULTI = 1.9;
 	
 	static final String personFile = "person.properties";
-	
+
+	/* Saves calories into user.properties file */
 	public static void saveUserData(int calories)
 	{
 		HashMap<String, String> personData = new HashMap<String, String>();
@@ -40,7 +46,8 @@ public class Biometrics
 			e.printStackTrace();
 		}
 	}
-	
+
+	/* using hashmap entered finds calories needed daily */
 	public static int calculateBMR(HashMap<String, ArrayList<String>> h, String username)
 	{
 		int calories;
@@ -72,7 +79,8 @@ public class Biometrics
 		
 		return calories;
 	}
-	
+
+	/* converts values from imperial measurements to metric then finds calories */
 	public static int metricBMR(String w, String h, String a, String s, String measure)
 	{
 		int calories;

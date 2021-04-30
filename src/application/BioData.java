@@ -7,7 +7,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
-
+/*
+	Author: Elijah Moya
+	Date: 4-19-2021
+	Utillity class to string arraylist to single String and manipulate properties file
+ */
 public class BioData {
 	
 	public static void addData(HashMap<String, ArrayList<String>> h, ArrayList<String> data, String key, String fileName)	{
